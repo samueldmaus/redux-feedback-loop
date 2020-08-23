@@ -12,6 +12,8 @@ const FeedbackReducer = (state = {feeling: 0, understanding: 0, supported: 0, co
         return {...state, feeling: action.payload}
     } else if(action.type === "ADD_SUPPORT") {
         return {...state, supported: action.payload}
+    } else if(action.type === "ADD_UNDERSTANDING") {
+        return {...state, understanding: action.payload}
     }
 
     return state;

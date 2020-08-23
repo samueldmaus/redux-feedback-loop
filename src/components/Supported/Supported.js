@@ -11,12 +11,12 @@ class Supported extends Component{
                 this.props.dispatch({type:"ADD_SUPPORT", payload: supported[i].value})
             }
         }
-        // this.props.history.push('/understanding');
+        this.props.history.push('/understanding');
     };
 
     render() {
         return (
-            <form onSubmit={this.getRadioValue}>
+        <form onSubmit={this.getRadioValue}>
 
             <p>How well are you being supported?</p>
             <label for="valStart">1</label>
@@ -27,6 +27,7 @@ class Supported extends Component{
             <input name="supported"  type="radio" id="valEnd" value="5" />
             <label for="valEnd">5</label>
             <button type="submit">Submit</button>
+            
         </form> 
         )
     }

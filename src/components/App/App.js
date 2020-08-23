@@ -3,6 +3,7 @@ import './App.css';
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import Feeling from '../Feeling/Feeling.js';
 import Supported from '../Supported/Supported.js'
+import Understanding from '../Understanding/Understanding';
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
         </div>
         <Route exact path="/feeling" component={Feeling}/>
         <Route exact path="/supported" component={Supported} />
+        <Route exact path="/understanding" component={Understanding} />
       </Router>
 
     );
