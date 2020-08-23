@@ -19,13 +19,13 @@ class Understanding extends Component{
         <form onSubmit={this.getRadioValue}>
 
             <p>How well are you being supported?</p>
-            <label for="valStart">1</label>
+            <label htmlFor="valStart">1</label>
             <input name="understanding" type="radio" id="valStart" value="1" />
             <input name="understanding"  type="radio"  value="2" />
             <input name="understanding"  type="radio"  value="3" />
             <input name="understanding"  type="radio" value="4" />
             <input name="understanding"  type="radio" id="valEnd" value="5" />
-            <label for="valEnd">5</label>
+            <label htmlFor="valEnd">5</label>
             <button type="submit">Submit</button>
             
         </form> 
