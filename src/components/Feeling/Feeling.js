@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import './Feeling.css';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Box from '@material-ui/core/Box'
+import Box from '@material-ui/core/Box';
+import './Feeling.css'
 
 export default connect()(class Feeling extends Component {
 
@@ -28,7 +28,7 @@ export default connect()(class Feeling extends Component {
     render() {
         return (
             <form onSubmit={this.getRadioValue}>
-
+                
                 <p>How are you feeling today?</p>
                 <Box display="flex" justifyContent="center">
                 <RadioGroup className='radioButtons' row  name="feeling" >

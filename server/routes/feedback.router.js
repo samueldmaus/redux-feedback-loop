@@ -10,7 +10,18 @@ router.post('/', (req, res) => {
     .then(response => {
         res.sendStatus(201);
     }).catch(error => {
-        console.log('error in POST:', error)
+        console.log('error in POST:', error);
+        res.sendStatus(500);
+    })
+});
+
+router.get('/', (req, res) => {
+    pool.query(`SELECT * FROM "feedback" ORDER BY "date";`)
+    .then(result => {
+        res.send(result.rows)
+    }).catch(error => {
+        console.log('error in GET:', error);
+        res.sendStatus(500);
     })
 })
 

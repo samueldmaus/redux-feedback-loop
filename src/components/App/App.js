@@ -11,6 +11,7 @@ import Intro from '../Intro/Intro.js';
 import HomeIcon from '@material-ui/icons/Home';
 import { IconButton } from '@material-ui/core';
 import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
+import Admin from '../Admin/Admin.js';
 
 class App extends Component {
   render() {
@@ -21,7 +22,7 @@ class App extends Component {
             <h1 className="App-title">Feedback!</h1>
             <h4><i>Don't forget it!</i></h4>
             <IconButton><Link to="/"><HomeIcon fontSize='large' /></Link></IconButton>
-            <IconButton><SupervisorAccountIcon fontSize='large' /></IconButton>
+            <IconButton><Link to="/admin"><SupervisorAccountIcon fontSize='large' /></Link></IconButton>
           </header>
           <br/>
           <Intro component={withRouter(Intro)} />
@@ -32,6 +33,7 @@ class App extends Component {
         <Route exact path="/comments"  component={Comments} />
         <Route exact path="/review" component={Review} />
         <Route exact path="/completed" component={CompletedFeedback} />
+        <Route exact path="/admin" component={Admin} />
       </Router>
 
     );
