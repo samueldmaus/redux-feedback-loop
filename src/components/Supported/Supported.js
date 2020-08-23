@@ -5,13 +5,18 @@ class Supported extends Component{
 
     getRadioValue = (event) => {
         event.preventDefault();
+        let hasChecked = false;
         let supported = document.getElementsByName('supported');
         for(let i = 0; i < supported.length; i++){
             if(supported[i].checked) {
-                this.props.dispatch({type:"ADD_SUPPORT", payload: supported[i].value})
+                hasChecked = true;
+                this.props.dispatch({type:"ADD_SUPPORT", payload: supported[i].value});
+                this.props.history.push('/understanding');
             }
         }
-        this.props.history.push('/understanding');
+        if(hasChecked === false) {
+            alert('Please select a supported level')
+        }
     };
 
     render() {

@@ -5,14 +5,20 @@ class Feeling extends Component {
 
     getRadioValue = (event) => {
         event.preventDefault();
+        let hasChecked = false;
         let feeling = document.getElementsByName('feeling');
         for(let i = 0; i < feeling.length; i++){
             if(feeling[i].checked) {
-                this.props.dispatch({type:"ADD_FEELING", payload: feeling[i].value})
+                hasChecked = true;
+                this.props.dispatch({type:"ADD_FEELING", payload: feeling[i].value});
+                this.props.history.push('/supported');
             }
         }
-        this.props.history.push('/supported');
-    };
+        if(hasChecked === false) {
+            alert('Please select a feeling value')
+        }
+    }
+
 
     render() {
         return (

@@ -5,13 +5,18 @@ class Understanding extends Component{
 
     getRadioValue = (event) => {
         event.preventDefault();
+        let hasChecked = false;
         let understanding = document.getElementsByName('understanding');
         for(let i = 0; i < understanding.length; i++){
             if(understanding[i].checked) {
-                this.props.dispatch({type:"ADD_UNDERSTANDING", payload: understanding[i].value})
+                hasChecked = true;
+                this.props.dispatch({type:"ADD_UNDERSTANDING", payload: understanding[i].value});
+                this.props.history.push('/comments')
             }
         }
-        this.props.history.push('/comments');
+        if(hasChecked === false) {
+            alert('Please select an understanding level');
+        }
     };
 
     render(){
