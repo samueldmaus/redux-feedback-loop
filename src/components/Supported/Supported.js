@@ -31,7 +31,7 @@ class Supported extends Component{
             <input name="supported"  type="radio" value="4" />
             <input name="supported"  type="radio" id="valEnd" value="5" />
             <label htmlFor="valEnd">5</label>
-            <button type="submit">Submit</button>
+            <button type="submit">Next</button>
 
         </form> 
         )

@@ -5,6 +5,8 @@ import Feeling from '../Feeling/Feeling.js';
 import Supported from '../Supported/Supported.js'
 import Understanding from '../Understanding/Understanding';
 import Comments from '../Comments/Comments.js';
+import Review from '../Review/Review.js';
+import CompletedFeedback from '../CompletedFeedback/CompletedFeedback';
 
 class App extends Component {
   render() {
@@ -26,6 +28,8 @@ class App extends Component {
         <Route exact path="/supported" component={Supported} />
         <Route exact path="/understanding" component={Understanding} />
         <Route exact path="/comments"  component={Comments} />
+        <Route exact path="/review" component={Review} />
+        <Route exact path="/completed" component={CompletedFeedback} />
       </Router>
 
     );

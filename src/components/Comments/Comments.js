@@ -17,7 +17,8 @@ class Comments extends Component {
         this.props.dispatch({type:"ADD_COMMENTS", payload: this.state.comments})
         this.setState({
             comments:''
-        })
+        });
+        this.props.history.push('/review');
     }
 
     render(){
@@ -25,7 +26,7 @@ class Comments extends Component {
             <form onSubmit={this.handleSubmit}>
                 <p>Any comments you want to leave?</p>
                 <input placeholder="Comments" onChange={this.handleChange} value={this.state.comments}/>
-                <button type="submit">Submit</button>
+                <button type="submit">Next</button>
             </form>
         )
     }
