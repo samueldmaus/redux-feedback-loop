@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux'
 
 class Feeling extends Component {
-    state ={
-        value: 0
-    }
 
     getRadioValue = (event) => {
         event.preventDefault();
@@ -14,6 +11,7 @@ class Feeling extends Component {
                 this.props.dispatch({type:"ADD_FEELING", payload: feeling[i].value})
             }
         }
+        this.props.history.push('/supported');
     };
 
     render() {
