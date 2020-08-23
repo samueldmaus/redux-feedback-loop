@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
-import axios from 'axios'
+import axios from 'axios';
+import { IconButton } from '@material-ui/core';
+import FlagIcon from '@material-ui/icons/Flag';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 export default class Admin extends Component{
     state = {
@@ -41,8 +44,8 @@ export default class Admin extends Component{
                             <td>{feedback.understanding}</td>
                             <td>{feedback.support}</td>
                             <td>{feedback.comments}</td>
-                            <td>{feedback.flagged}</td>
-                            <td><button>Delete</button></td>
+                            <td><IconButton><FlagIcon fontSize='large' /></IconButton></td>
+                            <td><IconButton><DeleteIcon fontSize='large' /></IconButton></td>
                         </tr>
                     ))}
                 </tbody>

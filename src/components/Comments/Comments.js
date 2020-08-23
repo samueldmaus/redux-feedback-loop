@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import TextField from '@material-ui/core/TextField';
+import Box from '@material-ui/core/Box';
 
 class Comments extends Component {
     state = {
@@ -25,7 +27,10 @@ class Comments extends Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <p>Any comments you want to leave?</p>
-                <input placeholder="Comments" onChange={this.handleChange} value={this.state.comments}/>
+                <Box m={1}>
+                    <TextField multiline label="Comments" value={this.state.comments} onChange={this.handleChange} />
+                </Box>
+                <br />
                 <button onClick={()=>this.props.history.goBack()}>Back</button>
                 <button type="submit">Next</button>
             </form>
