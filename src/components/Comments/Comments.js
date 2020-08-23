@@ -26,6 +26,7 @@ class Comments extends Component {
             <form onSubmit={this.handleSubmit}>
                 <p>Any comments you want to leave?</p>
                 <input placeholder="Comments" onChange={this.handleChange} value={this.state.comments}/>
+                <button onClick={()=>this.props.history.goBack()}>Back</button>
                 <button type="submit">Next</button>
             </form>
         )
